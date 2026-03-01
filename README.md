@@ -1,35 +1,29 @@
-🔐 React Password Generator
+# React Password Generator
 
-A dynamic password generator built using React that allows users to generate secure passwords with customizable length and character options.
+An interactive password generator built using React that allows users to generate secure passwords with custom length and character options.
 
-🚀 Features
+## 🔐 Features
+- Adjustable password length using slider
+- Toggle options to include numbers and special characters
+- Instant generation of new passwords
+- Clean and responsive user interface
 
-Adjustable password length
+## 🛠️ Tech Stack
+- React (with functional components and hooks)
+- JavaScript (ES6+)
+- HTML5 & CSS3
 
-Option to include numbers
+## 📚 Skills Demonstrated
+- React Hooks (`useState`)
+- State and event handling
+- Conditional rendering
+- Modular component design
+- Responsive UI updates
 
-Option to include special characters
+## 🚀 How to Run Locally
+1. Clone the repository
+2. Run `npm install`
+3. Run `npm start`
 
-Real-time password generation
-
-Responsive UI
-
-🛠️ Tech Stack
-
-React (Functional Components)
-
-React Hooks (useState)
-
-JavaScript (ES6+)
-
-HTML5 & CSS3
-
-📚 Learning Outcomes
-
-State management using React Hooks
-
-Event handling and conditional rendering
-
-Component-based architecture
-
-Dynamic UI updates
+## 📌 Live Demo (if deployed)
+*Add link here if you deploy it on Vercel/Netlify*
