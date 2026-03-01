@@ -21,6 +21,10 @@ An interactive password generator built using React that allows users to generat
 - Responsive UI updates
 
 ## 🚀 How to Run Locally
+
 1. Clone the repository
-2. Run `npm install`
-3. Run `npm start`
+2. Navigate to the project folder
+3. Install dependencies:
+   npm install
+4. Start the development server:
+   npm run dev
