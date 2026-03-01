@@ -24,6 +24,3 @@ An interactive password generator built using React that allows users to generat
 1. Clone the repository
 2. Run `npm install`
 3. Run `npm start`
-
-## 📌 Live Demo (if deployed)
-*Add link here if you deploy it on Vercel/Netlify*
