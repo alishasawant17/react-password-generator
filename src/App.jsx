@@ -1,4 +1,4 @@
-import { useState,useCallback } from 'react'
+import { useState,useCallback,useEffect,useRef } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
@@ -8,6 +8,9 @@ function App() {
   const [numAllowed, setNumAllowed] = useState(false)
   const [charAllowed, setCharAllowed] = useState(false);
   const [password, setPassword] = useState("")
+
+  //ref hook
+  const passowrdRef = useRef(null)
 
   const passwordGenerator = useCallback(() => {
     let pass = ""
@@ -20,6 +23,17 @@ function App() {
 
     setPassword(pass)
   },[length, numAllowed, charAllowed, setPassword])  
+
+  const copyPasswordToClick = useCallback(() => {
+    passowrdRef.current?.select()
+    passowrdRef.current?.setSelectionRange(0, 21)
+    window.navigator.clipboard.writeText(password)
+  },
+  [password])
+
+  useEffect(() => {
+    passwordGenerator()
+  },[length, numAllowed, charAllowed, passwordGenerator])
 
   return (
   <div className="min-h-screen flex items-center justify-center bg-gray-900">
@@ -35,14 +49,22 @@ function App() {
           placeholder="Generated Password"
           value={password}
           readOnly
+          ref={passowrdRef}
           className="w-full px-4 py-2 rounded-l-lg bg-gray-700 text-white focus:outline-none"
         />
-        <button
+        {/* <button
           onClick={passwordGenerator}
           className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-r-lg transition"
         >
           Generate
+        </button> */}
+        <button
+          onClick={copyPasswordToClick}
+          className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-r-lg transition"
+        >
+          Copy
         </button>
+
       </div>
 
       <div className="flex flex-col gap-3 text-white">
